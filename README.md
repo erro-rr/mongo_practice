@@ -156,6 +156,7 @@ db.movies.updateOne(
 db.movies.find({synopsis:/Bilbo/})
 db.movies.find({synopsis:/Gandalf/})
 db.movies.find({$and:[{synopsis:/Bilbo/},{synopsis:{$not:/Gandalf/}}]})
+db.movies.find({$or:[{synopsis:/dwarves/i},{synopsis:/hobbit/i}]})
 ```
 
 ## Delete Documents
