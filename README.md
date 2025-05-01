@@ -152,6 +152,10 @@ db.movies.updateOne(
 1. find all movies that have a synopsis that contains the word "Bilbo" and not the word "Gandalf"
 1. find all movies that have a synopsis that contains the word "dwarves" or "hobbit"
 1. find all movies that have a synopsis that contains the word "gold" and "dragon"
+   
+db.movies.find({synopsis:/Bilbo/})
+db.movies.find({synopsis:/Gandalf/})
+db.movies.find({$and:[{synopsis:/Bilbo/},{synopsis:{$not:/Gandalf/}}]})
 
 ## Delete Documents
 
